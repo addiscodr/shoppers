@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/grid_card.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -9,11 +11,23 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  final data = ['1', '2'];
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("Home Screen"),
 
-    );
+    return Container(
+      child: GridView.builder(
+        itemCount: data.length,
+          padding: EdgeInsets.symmetric(vertical: 30),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+          mainAxisSpacing: 30, crossAxisSpacing: 30),
+          itemBuilder: (BuildContext context, int index){
+            return GridCard(index: index, onPress:(){});
+          })
+            );
+
   }
 }
