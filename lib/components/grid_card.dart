@@ -16,11 +16,7 @@ class GridCard extends StatelessWidget {
           ? const EdgeInsets.only(left: 22)
           : const EdgeInsets.only(right: 22),
 
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(35),
-        boxShadow: CustomTheme.cardShadow,
-      ),
+      decoration: CustomTheme.getCardDecoration(),
       child: GestureDetector(
         onTap: onPress,
         child: ClipRRect(

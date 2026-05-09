@@ -67,7 +67,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// continue from 21:00
+// continue from 35:00
 
 // Use this inside your Stripe setup logic
 // import 'package:flutter_dotenv/flutter_dotenv.dart';
